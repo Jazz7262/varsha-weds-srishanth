@@ -1,0 +1,221 @@
+/* Big Screens */
+#slide {
+    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.492);
+    position: relative;
+    color: #8d0054;
+    background: url("../../public/assets/images/bg-img-2.jpg") repeat fixed 50%;
+}
+
+#slide .slide-wrapper {
+    padding: 10% 7%;
+}
+
+#slide .img-wrapper img {
+    width: 40%;
+    border-radius: 50%;
+    border: 5px solid #c40878;
+}
+
+#slide .text-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 43%;
+    left: 0;
+}
+
+#slide .text-wrapper h4 {
+    font-weight: 400;
+}
+
+#slide .text-wrapper h1 {
+    font-family: "Great Vibes", cursive;
+}
+
+#slide .text-wrapper p {
+    font-weight: 600;
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid #c40878;
+    border-radius: 5px;
+    -webkit-animation: glow 1.5s linear infinite;
+    -moz-animation: glow 1.5s linear infinite;
+    animation: glow 1.5s linear infinite;
+}
+/* Glowing Date Animation  */
+@keyframes glow {
+    0% {
+        box-shadow: -5px -5px 5px #c4087881, 5px 5px 5px #c4087881,
+            -5px 5px 5px #c4087881, 5px -5px 5px #c4087881;
+    }
+
+    50% {
+        box-shadow: none;
+    }
+
+    100% {
+        box-shadow: -5px -5px 5px #c4087881, 5px 5px 5px #c4087881,
+            -5px 5px 5px #c4087881, 5px -5px 5px #c4087881;
+    }
+}
+
+#slide .text-content h3 {
+    font-weight: 400;
+    font-size: 130%;
+    margin-bottom: 12px;
+}
+
+#slide .text-content h1 {
+    font-family: "Great vibes", cursive;
+    font-size: 250%;
+    margin-bottom: 16px;
+}
+
+#slide .text-content p {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid #c40878;
+    border-radius: 5px;
+    -webkit-animation: glow 1.5s linear infinite;
+    -moz-animation: glow 1.5s linear infinite;
+    animation: glow 1.5s linear infinite;
+}
+/* Glowing Date Animation  */
+@keyframes glow {
+    0% {
+        box-shadow: -5px -5px 5px #c4087881, 5px 5px 5px #c4087881,
+            -5px 5px 5px #c4087881, 5px -5px 5px #c4087881;
+    }
+
+    50% {
+        box-shadow: none;
+    }
+
+    100% {
+        box-shadow: -5px -5px 5px #c4087881, 5px 5px 5px #c4087881,
+            -5px 5px 5px #c4087881, 5px -5px 5px #c4087881;
+    }
+}
+
+.wheel {
+    width: 450px;
+    position: absolute;
+}
+
+.wheel-top-left {
+    top: -225px;
+    left: -225px;
+    animation: rotate-top-left-wheel 10s linear infinite;
+}
+@keyframes rotate-top-left-wheel {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.wheel-bottom-right {
+    clip: rect(0, 225px, 225px, 0);
+    bottom: -225px;
+    right: -225px;
+    /* animation: rotate-top-right-wheel 10s linear infinite; */
+}
+@keyframes rotate-top-right-wheel {
+    from {
+        transform: rotate(0deg);
+        clip: rect(225px, 0px, 0px, 225px);
+    }
+    to {
+        transform: rotate(359deg);
+        clip: rect(0, 225px, 225px, 0);
+    }
+}
+
+.flower {
+    width: 150px;
+    position: absolute;
+}
+
+.flower-top-left {
+    top: 0;
+    left: 0;
+}
+
+.flower-top-right {
+    top: 0;
+    right: 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.flower-bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.flower-bottom-right {
+    bottom: 0;
+    right: 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+/* Tablet Wide Screens */
+@media (max-width: 992px) {
+    #slide .text-content h3 {
+        font-size: 90%;
+    }
+    #slide .text-content h1 {
+        font-size: 200%;
+        margin-bottom: 10px;
+    }
+    #slide .text-content p {
+        font-size: 80%;
+        padding: 6px 12px;
+    }
+    .wheel-bottom-right {
+        display: none;
+    }
+}
+
+/* New Mobile Phones Wide Screens */
+@media (max-width: 428px) {
+    #slide .slide-wrapper {
+        padding: 20% 10% 10%;
+    }
+    #slide .img-wrapper img {
+        width: 70%;
+    }
+    #slide .text-wrapper h4 {
+        font-size: 1rem;
+    }
+    #slide .text-wrapper h1 {
+        font-size: 1.75rem;
+    }
+    #slide .text-wrapper p {
+        font-size: 12px;
+    }
+    .wheel {
+        width: 300px;
+    }
+    .wheel-top-left {
+        top: -150px;
+        left: -150px;
+    }
+    .flower {
+        width: 80px;
+    }
+}
+
+/* Old Mobile Phones Wide Screens */
+@media (max-width: 360px) {
+    #slide .text-content h1 {
+        font-size: 100%;
+        margin-bottom: 4px;
+    }
+    #slide .text-content p {
+        padding: 3px 6px;
+    }
+}
