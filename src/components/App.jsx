@@ -28,6 +28,11 @@ function App() {
                 $(".navbar").removeClass("nav-bg");
             }
         });
+
+        $(window).blur(() => {
+            let audioBtn = document.getElementById("play-btn");
+            audioBtn.click();
+        });
     }, []);
 
     setTimeout(() => {
